@@ -1,0 +1,12 @@
+/* Exclusivo de "encabezado" */
+  .header {
+    background: url(src/assets/Imágenes/Covers/imagen-banner.jpg);
+    background-size: cover;
+    height: 600px;
+    width: 100%;
+  }
+  
+  .redes-sociales-icons{
+    height: 30px;
+    width: 30px;
+  }
