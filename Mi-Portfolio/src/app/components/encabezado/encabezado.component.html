@@ -1,4 +1,6 @@
 <header>
+    <!-- Navbar Primaria -->
+  
     <!-- Logo y Hashtag de Argentina Programa -->
     <nav class="navbar navbar-dark bg-dark">
       <div class="container-fluid">
@@ -6,51 +8,65 @@
           <img src="../assets/Imágenes/Logos Portfolio/APLogo.png" alt="Logo Argentina Programa" height="60" width="80">
           <span class="d-none d-sm-inline">#ArgentinaPrograma</span>
         </a>
-      
+  
         <!-- Íconos de Redes Sociales y Botón -->
         <div class="d-flex align-items-center justify-content-around">
-            <a href="https://www.facebook.com/leonelariel.piedrabuena" target="_blank">
-          <span class="d-none d-sm-inline">
-            <img src="../assets/Imágenes/Logos Portfolio/facebook.png" class="redes-sociales-icons mx-2" alt="Logo Facebook">
-          </span>
-        </a>
-      
+          <a href="https://www.facebook.com/leonelariel.piedrabuena" target="_blank">
+            <span class="d-none d-sm-inline">
+              <img src="../assets/Imágenes/Logos Portfolio/facebook.png" class="redes-sociales-icons mx-2"
+                alt="Logo Facebook">
+            </span>
+          </a>
+  
           <a href="https://github.com/LeonelPB04" target="_blank">
-          <span class="d-none d-sm-inline">
-            <img src="../assets//Imágenes/Logos Portfolio/github.png" class="redes-sociales-icons mx-2" alt="Logo Github">
-          </span>
-        </a>
-      
-        <a href="https://www.linkedin.com/in/LeonelPiedrabuena0403/" target="_blank">
-          <span class="d-none d-sm-inline">
-            <img src="../assets//Imágenes/Logos Portfolio/linkedin.png" class="redes-sociales-icons mx-2" alt="Logo Linkedin">
-          </span>
-        </a>
-      
-        <button class="navbar-toggler mx-2" type="button" data-bs-toggle="collapse" data-bs-target="#navbarToggleExternalContent" aria-controls="navbarToggleExternalContent" aria-expanded="false" aria-label="Toggle navigation">
-          <span class="navbar-toggler-icon"></span>
-        </button>
-      </div>
-    </div>
-    </nav>
-
-    <!-- Navbar Externa -->
-    <div class="collapse" id="navbarToggleExternalContent">
-      <div class="bg-dark p-4 bg-opacity-75">
-        <h5 class="text-white h4">Collapsed content</h5>
-        <span class="text-muted">Toggleable via the navbar brand.</span>
-      </div>
-    </div>
-    
-      <!-- Banner Introductorio -->
-      <div class="container-fluid text-center header">
-        <div class="row h-100">
-          <div class="col-6 m-auto p-1 text-wrap border">
-            <h3 style="color:rgb(240, 248, 255)">Hola.</h3>
-              <h3 style="color:rgba(219, 219, 233, 0.89)">
-                Mi nombre es <em>Leonel Piedrabuena</em>, y este es mi Portfolio Web.
-              </h3>
-          </div>
+            <span class="d-none d-sm-inline">
+              <img src="../assets//Imágenes/Logos Portfolio/github.png" class="redes-sociales-icons mx-2"
+                alt="Logo Github">
+            </span>
+          </a>
+  
+          <a href="https://www.linkedin.com/in/LeonelPiedrabuena0403/" target="_blank">
+            <span class="d-none d-sm-inline">
+              <img src="../assets//Imágenes/Logos Portfolio/linkedin.png" class="redes-sociales-icons mx-2"
+                alt="Logo Linkedin">
+            </span>
+          </a>
+  
+          <!-- Despliegue de Navbar Secundaria -->
+          <button class="navbar-toggler mx-2" type="button" data-bs-toggle="collapse"
+            data-bs-target="#navbarToggleExternalContent" aria-controls="navbarToggleExternalContent"
+            aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
         </div>
       </div>
+    </nav>
+  
+    <!-- Navbar Secundaria -->
+    <div class="collapse" id="navbarToggleExternalContent">
+      <div class="bg-dark p-4 bg-opacity-75 text-end">
+        <h4><a href="/login" class="text-decoration-none" *ngIf="!isLogged">Iniciar Sesión</a></h4>
+        <h4><a href="" class="text-decoration-none" (click)="onLogOut()" *ngIf="isLogged">Cerrar Sesión</a></h4>
+        <div class="col-4 offset-8">
+        <ul class="text-muted list-unstyled">
+          <li><a href="#SobreMi" class="list-group-item">Sobre mi</a></li>
+          <li><a href="#Experiencia y Educación" class="list-group-item">Experiencia y Educación</a></li>
+          <li><a href="#Habilidades" class="list-group-item">Habilidades</a></li>
+          <li><a href="#Proyectos" class="list-group-item">Proyectos</a></li>
+        </ul>
+      </div>
+      </div>
+    </div>
+  
+    <!-- Banner Introductorio -->
+    <div class="container-fluid text-center header">
+      <div class="row h-100">
+        <div class="col-6 m-auto p-1 text-wrap border">
+          <h3 style="color:rgb(240, 248, 255)">Hola.</h3>
+          <h3 style="color:rgba(219, 219, 233, 0.89)">
+            Mi nombre es <em>{{persona.nombre}} {{persona.apellido}}</em>, y este es mi Portfolio Web.
+          </h3>
+        </div>
+      </div>
+    </div>
   </header>

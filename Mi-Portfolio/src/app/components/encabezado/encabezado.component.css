@@ -1,5 +1,5 @@
 /* Exclusivo de "encabezado" */
-  .header {
+.header {
     background: url(src/assets/Imágenes/Covers/imagen-banner.jpg);
     background-size: cover;
     height: 600px;
@@ -10,3 +10,6 @@
     height: 30px;
     width: 30px;
   }
+
+  a{color: rgb(217, 226, 235);}
+  a:hover{color:rgb(134, 141, 148);}

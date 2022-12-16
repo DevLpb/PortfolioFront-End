@@ -3,80 +3,22 @@
     <div class="container-fluid py-3">
       <div class="row mt-2">
         <div class="col-md-3">
+          <a name="Experiencia y Educación"></a>
           <h2 class="texto-claro">Experiencia</h2>
         </div>
       </div>
       <div class="row">
-        <div class="col pt-2 mx-4 border">
-          <ul class="list-group mb-2">
-            <h3 class="texto-oscuro">Trabajos en el área informática</h3>
+        <button type="button" class="btn btn-secondary" routerLink="/nuevaexp" *ngIf="isLogged">
+          Nueva experiencia
+        </button>
+        <div class="col pt-2 mx-4 border"> <h4>Editar</h4>
+          <ul class="list-group mb-2" *ngFor="let Experiencia of exp"> 
+            <h3 class="texto-oscuro">{{Experiencia.nombreE}}</h3>
             <li class="list-group-item bg-transparent border-items rounded">
-              <p>No tengo experiencia en ningún trabajo dentro de esta área, pero frecuento entornos creativos con herramientas similares, como la producción musical o el diseño.
+              <p>{{Experiencia.descripcionE}}
               </p>
-            </li>
-            <h3 class="texto-oscuro">Trabajos fuera del área informática</h3>
-            <li class="list-group-item bg-transparent border-items rounded">
-              <p>Principalmente me desempeño como electricista doméstico.<br>
-                También soy músico, de vez en cuando.
-
-              </p>
-            </li>
           </ul>
         </div>
-      </div>
-      <div class="row mt-3">
-        <div class="col-md-3">
-          <h2 class="texto-claro">Educación</h2>
-          </div>
-        </div>
-        <div class="row">
-          <div class="col pt-2 mx-4 border rounded">
-
-            <ul class="list-group mb-2 p-1">
-              <h3 class="texto-oscuro">Educación secundaria</h3>
-              <li class="list-group-item bg-transparent border-items rounded">  
-                  <img src="../assets/Imágenes/Logos Portfolio/EETN2.png" class="float-start img-fluid me-3" height="100" width="100" alt="Logo E.E.T.Nº2">
-                <p>E.E.T.Nº 2 "Alte. Guillermo Brown"<br>
-                  2015 - 2017
-                </p>
-              </li>
-              <li class="list-group-item bg-transparent border-items rounded">
-                  <img src="../assets/Imágenes/Logos Portfolio/NRESO3270.png" class="float-start img-fluid me-3" height="100" width="100" alt="Logo N.R.E.S.O. Nº 3270">
-                <p>N.R.E.S Orientada Nº 3270 Arminda<br>
-                    2017 - 2020</p>
-                  </li>   
-
-              <h3 class="texto-oscuro">Cursos</h3>
-              <li class="list-group-item bg-transparent border-items rounded">  
-                  <img src="../assets/Imágenes/Logos Portfolio/PAV.png" class="float-start img-fluid me-3 mt-2 bg-light bg-opacity-10" height="125" width="100" alt="Logo Plataforma de aprendizaje virtual">
-                <p>
-                  Algoritmos en programación<br>
-                  2022 - 2022
-                </p>
-              </li>
-              <li class="list-group-item bg-transparent border-items rounded">  
-                  <img src="../assets/Imágenes/Logos Portfolio/PAV.png" class="float-start img-fluid me-3 mt-2 bg-light bg-opacity-10" height="125" width="100" alt="Logo Plataforma de aprendizaje virtual">
-                <p>
-                  Programación Web<br>
-                  2022 - 2022
-                </p>
-              </li>
-              <li class="list-group-item bg-transparent border-items rounded">  
-                  <img src="../assets/Imágenes/Logos Portfolio/APLogo.png" class="float-start img-fluid me-3" height="125" width="100" alt="Logo Argentina Programa">
-                <p>
-                  Sé Programar<br>
-                  2022- 2022
-                </p>
-              </li>
-              <li class="list-group-item bg-transparent border-items rounded">  
-                  <img src="../assets/Imágenes/Logos Portfolio/APLogo.png" class="float-start img-fluid me-3" height="125" width="100" alt="Logo Argentina Programa">
-                <p>
-                  Yo Programo<br>
-                  2022 - 2022
-                </p>
-              </li>
-            </ul>
-          </div>
       </div>
       </div>
   </section>
