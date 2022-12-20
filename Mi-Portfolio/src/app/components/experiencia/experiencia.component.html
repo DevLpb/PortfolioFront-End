@@ -11,9 +11,25 @@
         <button type="button" class="btn btn-secondary" routerLink="/nuevaexp" *ngIf="isLogged">
           Nueva experiencia
         </button>
-        <div class="col pt-2 mx-4 border"> <h4>Editar</h4>
+        <div class="col pt-2 mx-4 border"> 
           <ul class="list-group mb-2" *ngFor="let Experiencia of exp"> 
-            <h3 class="texto-oscuro">{{Experiencia.nombreE}}</h3>
+            <div class="col-sm-1 mx-1 align-self-end">
+              <button *ngIf="isLogged" 
+              class="align-self-end mt-3 btn btn-secondary" routerLink="/editexp/{{Experiencia.id}}">
+              <i class="bi bi-pencil-fill"></i> Editar 
+            </button>
+
+            </div>
+              <div class="col-sm-1 mx-1 align-self-end">
+                <button *ngIf="isLogged" 
+                class="align-self-end mt-3 btn btn-danger" (click)="delete(Experiencia.id)">
+                <i class="bi bi-x-circle"></i> Borrar 
+              </button>
+              </div>
+            
+            
+            
+            <h3 class="texto-oscuro">{{Experiencia.nombreE}}</h3> 
             <li class="list-group-item bg-transparent border-items rounded">
               <p>{{Experiencia.descripcionE}}
               </p>
