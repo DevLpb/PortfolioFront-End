@@ -7,41 +7,39 @@
       </div>
     </div>
 
-    <!-- Botones de crear, editar y borrar -->
-    <div class="row">
+    <!-- Botones de añadir, editar y borrar edicación.
+    Editar y borrar se incluyen dentro del ciclo -->
+    <div class="d-grid gap-2 col-5 mx-auto mb-3">
       <button
         type="button"
         class="btn btn-secondary"
         routerLink="/nuevaeduc"
-        *ngIf="isLogged"
-      >
+        *ngIf="isLogged">
         Nueva educación
       </button>
-
+    </div>
+      
       <div class="col pt-2 mx-4 border">
+        <!-- Ciclo -->
         <section class="list-group mb-2" *ngFor="let Educacion of educacion">
-          <div class="col-sm-1 mx-1 align-self-end">
+          
+          <div class="d-grid gap-2 d-md-flex mx-4 justify-content-md-end">
             <button
               *ngIf="isLogged"
               class="align-self-end mt-3 btn btn-secondary"
-              routerLink="/editexp/{{ Educacion.id }}"
-            >
+              routerLink="/editeduc/{{ Educacion.id }}">
               <i class="bi bi-pencil-fill"></i> Editar
             </button>
-          </div>
-          <div class="col-sm-1 mx-1 align-self-end">
+
             <button
               *ngIf="isLogged"
               class="align-self-end mt-3 btn btn-danger"
-              (click)="delete(Educacion.id)"
-            >
+              (click)="delete(Educacion.id)">
               <i class="bi bi-x-circle"></i> Borrar
             </button>
           </div>
-          <!-- -->
 
-          <div class="row">
-            <div class="col pt-2 mx-4 border rounded">
+            <div class="col p-2 m-4 border rounded">
               <ul class="list-group mb-2 p-1">
                 <h3 class="texto-oscuro">{{Educacion.nombreE}}</h3>
                 <li class="list-group-item bg-transparent border-items rounded">
@@ -58,9 +56,9 @@
                 </li>
               </ul>
             </div>
-          </div>
         </section>
+        <!-- Fin de ciclo -->
       </div>
     </div>
-  </div>
+  
 </section>

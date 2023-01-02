@@ -8,7 +8,7 @@ import { Experiencia } from '../model/experiencia';
   providedIn: 'root'
 })
 export class ExperienciaService {
-  URL = environment.URL + 'explab/'
+  URL = 'https://concrete-ashlee-leonelpb04.koyeb.app/explab/'
 
   constructor(private httpClient: HttpClient) { }
 

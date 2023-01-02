@@ -8,7 +8,7 @@ import { Educacion } from '../model/educacion';
   providedIn: 'root'
 })
 export class EducacionService {
-  URL = environment.URL + 'educacion/'
+  URL = 'https://concrete-ashlee-leonelpb04.koyeb.app/educacion/'
 
   constructor(private httpClient: HttpClient) { }
 

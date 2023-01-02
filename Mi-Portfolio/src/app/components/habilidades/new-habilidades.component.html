@@ -1,33 +1,32 @@
 <div class="container">
-    <div class="row">
-      <div>
-        <form (ngSubmit)="onCreate()" novalidate #f="ngForm">
-          <div class="form-group texto-claro">
-            <label for="nombre">Nombre de Habilidad</label>
-            <input
-              type="text"
-              class="form-control"
-              id="nombre"
-              [(ngModel)]="nombre"
-              name="nombre"
-              required
-            />
-          </div>
-  
-          <div class="form-group texto-claro">
-            <label for="porcentaje">Porcentaje</label>
-            <input
-              type="text"
-              class="form-control"
-              id="porcentaje"
-              [(ngModel)]="porcentaje"
-              name="porcentaje"
-              required
-            />
-          </div>
-          <button class="btn btn-primary">Agregar habilidad</button>
-        </form>
-      </div>
+  <div class="row">
+    <div>
+      <form (ngSubmit)="onCreate()" novalidate #f="ngForm">
+        <div class="form-group texto-claro">
+          <label for="nombre">Nombre de Habilidad</label>
+          <input
+            type="text"
+            class="form-control"
+            id="nombre"
+            [(ngModel)]="nombre"
+            name="nombre"
+            required
+          />
+        </div>
+
+        <div class="form-group texto-claro">
+          <label for="porcentaje">Porcentaje</label>
+          <input
+            type="text"
+            class="form-control"
+            id="porcentaje"
+            [(ngModel)]="porcentaje"
+            name="porcentaje"
+            required
+          />
+        </div>
+        <button class="btn mt-2 btn-primary">Agregar habilidad</button>
+      </form>
     </div>
   </div>
-  
+</div>

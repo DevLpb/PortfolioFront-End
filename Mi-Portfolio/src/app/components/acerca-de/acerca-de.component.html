@@ -6,14 +6,24 @@
           <h2 class="texto-claro">Sobre mi</h2>  
 
       </div>
+
+      <div class="d-grid gap-2 col-5 mx-auto mb-3">
+        <button
+          type="button"
+          class="btn btn-secondary"
+          routerLink="/editacercade/1"
+          *ngIf="isLogged">
+          Editar persona
+        </button>
+      </div>
+
       <div class="row py-4 m-3 border rounded justify-content-around align-items-center">
         <div class="col-sm-3 border">
-          <img src="../assets/Imágenes/Covers/TEST.jpg" class="p-1 img-fluid rounded" id="Fotografía" alt="Fotografía">
+          <img src={{persona.img}} class="p-1 img-fluid rounded" id="Fotografía" alt="Fotografía">
         </div>
         <div class="col-sm-6 my-4 p-4 border rounded dark-background">    
           <h5 class= "texto-oscuro text-start">
-            Mi nombre es {{persona.nombre}} {{persona.apellido}}, tengo 19 años y soy argentino.
-            Obtuve el título "Desarrollador Full Stack Jr." cursando ArgentinaPrograma.
+            {{persona.descripcion}}
           </h5>
         </div>
       </div>

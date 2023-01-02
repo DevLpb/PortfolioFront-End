@@ -1,40 +1,44 @@
 <!-- Experiencia -->
 <section>
-    <div class="container-fluid py-3">
-      <div class="row mt-2">
-        <div class="col-md-3">
-          <a name="Experiencia y Educación"></a>
-          <h2 class="texto-claro">Experiencia</h2>
-        </div>
+  <div class="container-fluid py-3">
+    <div class="row mt-2">
+      <div class="col-md-3">
+        <a name="Experiencia y Educación"></a>
+        <h2 class="texto-claro">Experiencia</h2>
       </div>
-      <div class="row">
-        <button type="button" class="btn btn-secondary" routerLink="/nuevaexp" *ngIf="isLogged">
-          Nueva experiencia
-        </button>
-        <div class="col pt-2 mx-4 border"> 
-          <ul class="list-group mb-2" *ngFor="let Experiencia of exp"> 
-            <div class="col-sm-1 mx-1 align-self-end">
-              <button *ngIf="isLogged" 
-              class="align-self-end mt-3 btn btn-secondary" routerLink="/editexp/{{Experiencia.id}}">
-              <i class="bi bi-pencil-fill"></i> Editar 
-            </button>
+    </div>
 
+    <!-- Botones de añadir, editar y borrar experiencias.
+     Editar y borrar se incluyen dentro del ciclo -->
+    <div class="d-grid gap-2 col-5 mx-auto mb-3">
+      <button type="button" class="btn btn-secondary" routerLink="/nuevaexp" *ngIf="isLogged">
+        Nueva experiencia
+      </button>
+    </div> 
+
+      <div class="col p-2 mx-4 border"> 
+        <!-- Ciclo -->
+        <ul class="list-group mb-2" *ngFor="let Experiencia of exp"> 
+
+          <div class="d-grid gap-2 d-md-flex mx-4 justify-content-md-end">
+            <button *ngIf="isLogged" 
+            class="align-self-end mt-3 btn btn-secondary" routerLink="/editexp/{{Experiencia.id}}">
+            <i class="bi bi-pencil-fill"></i> Editar 
+          </button>
+
+              <button *ngIf="isLogged" 
+              class="align-self-end mt-3 btn btn-danger" (click)="delete(Experiencia.id)">
+              <i class="bi bi-x-circle"></i> Borrar 
+            </button>
             </div>
-              <div class="col-sm-1 mx-1 align-self-end">
-                <button *ngIf="isLogged" 
-                class="align-self-end mt-3 btn btn-danger" (click)="delete(Experiencia.id)">
-                <i class="bi bi-x-circle"></i> Borrar 
-              </button>
-              </div>
-            
-            
-            
-            <h3 class="texto-oscuro">{{Experiencia.nombreE}}</h3> 
-            <li class="list-group-item bg-transparent border-items rounded">
-              <p>{{Experiencia.descripcionE}}
-              </p>
-          </ul>
-        </div>
+          
+          
+          <h3 class="texto-oscuro">{{Experiencia.nombreE}}</h3> 
+          <li class="list-group-item bg-transparent border-items rounded">
+            <p>{{Experiencia.descripcionE}}
+            </p>
+        </ul>
+        <!-- Fin de ciclo -->
       </div>
-      </div>
-  </section>
+    </div>
+</section>

@@ -3,10 +3,22 @@
 // The list of file replacements can be found in `angular.json`.
 
 export const environment = {
+  firebase: {
+    projectId: 'miportfolioapfrontend',
+    appId: '1:38004057540:web:6f664608fc287f71db7091',
+    storageBucket: 'miportfolioapfrontend.appspot.com',
+    locationId: 'southamerica-east1',
+    apiKey: 'AIzaSyBKc_eLuSa7cytJfadh0fEcRxB8jYOUg-Q',
+    authDomain: 'miportfolioapfrontend.firebaseapp.com',
+    messagingSenderId: '38004057540',
+  },
   production: false,
 
   //Entorno de desarrollo local.
-  URL: 'http://localhost:8080/',
+  //URL: 'http://localhost:8080/',
+
+  //Entorno de producción.
+  URL:'https://concrete-ashlee-leonelpb04.koyeb.app/',
 };
 
 /*
