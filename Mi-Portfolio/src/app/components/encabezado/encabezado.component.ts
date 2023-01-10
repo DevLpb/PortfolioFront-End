@@ -11,7 +11,7 @@ import { TokenService } from 'src/app/service/token.service';
 export class EncabezadoComponent implements OnInit {
   isLogged = false;
   
-  persona: Persona = null;
+  persona: Persona = new Persona("", "", "", "");
   constructor(
     public personaService: PersonaService, 
     private tokenService: TokenService) { }

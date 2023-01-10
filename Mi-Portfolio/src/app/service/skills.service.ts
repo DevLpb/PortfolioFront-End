@@ -8,7 +8,7 @@ import { Skills } from '../model/skills';
   providedIn: 'root'
 })
 export class SkillsService {
-  URL = 'https://concrete-ashlee-leonelpb04.koyeb.app/hys/'
+  URL = environment.URL + 'hys/';
 
   constructor(private httpClient: HttpClient) { }
 

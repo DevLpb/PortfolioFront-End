@@ -10,7 +10,7 @@ import { NuevoUsuario } from '../model/nuevo-usuario';
   providedIn: 'root',
 })
 export class AuthService {
-  URL = 'https://concrete-ashlee-leonelpb04.koyeb.app/auth/';
+  URL = environment.URL + 'auth/';
 
   constructor(private httpClient: HttpClient) {}
 
