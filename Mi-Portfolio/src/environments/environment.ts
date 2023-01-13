@@ -15,7 +15,7 @@ export const environment = {
   production: false,
 
   //Entorno de desarrollo local.
-  //URL: 'http://localhost:8080/',
+  //URL:'http://localhost:8080/',
 
   //Entorno de producción.
   URL:'https://concrete-ashlee-leonelpb04.koyeb.app/',

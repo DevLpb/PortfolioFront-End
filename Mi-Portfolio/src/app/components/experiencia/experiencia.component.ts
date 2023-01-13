@@ -12,9 +12,7 @@ export class ExperienciaComponent implements OnInit {
   exp: Experiencia[] = [];
 
   constructor(
-    private experienciaService: ExperienciaService,
-    private tokenService: TokenService
-  ) {}
+    private experienciaService: ExperienciaService, private tokenService: TokenService) {}
 
   isLogged = false;
 

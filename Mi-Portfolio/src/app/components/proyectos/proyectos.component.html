@@ -7,20 +7,42 @@
           <h3 class="texto-claro pt-1 fuente-alt">Proyectos</h3>
         </div>
       </div>
+
       <div class="container py-2">
+
+         <!-- Botones de añadir, editar y borrar proyectos.
+     Editar y borrar se incluyen dentro del ciclo -->
+    <div class="d-grid gap-2 col-5 mx-auto mb-3">
+      <button type="button" class="btn btn-secondary" routerLink="/nuevoproyecto" *ngIf="isLogged">
+        Nuevo Proyecto
+      </button>
+    </div> 
   
         <!-- Para agregar nuevos proyectos, copiar esta sección de la misma forma. -->
-        <div class="row justify-content-between text-center">
+        <div class="row justify-content-between text-center" *ngFor="let Proyectos of proyectos">
+
+          <div class="d-grid gap-2 d-md-flex mx-4 justify-content-md-end">
+            <button *ngIf="isLogged" 
+            class="align-self-end mt-3 mx-2 btn btn-secondary" routerLink="/editproyecto/{{Proyectos.id}}">
+            <i class="bi bi-pencil-fill"></i> Editar 
+          </button>
+
+              <button *ngIf="isLogged" 
+              class="align-self-end mt-3 mx-2 btn btn-danger" (click)="delete(Proyectos.id)">
+              <i class="bi bi-x-circle"></i> Borrar 
+            </button>
+            </div>
+
           <div class="col-lg-6 col-md-12 mb-4 mb-lg-0" >
             <img
-              src="../assets/Imágenes/Covers/imagen-portfolio.jpg"
-              class="w-100 rounded mb-4"
-              alt="Imágen Portfolio"
+              src={{Proyectos.img}}
+              class="w-100 rounded mb-4 ImgProyectos"
+              alt="Imágen Proyecto"
             />
           </div>
           <div class="col-lg-6 col-md-12 mb-4 mb-lg-0 "> 
-            <h4 class="text-white">Portfolio</h4>
-            <p>Página de presentación, información personal, muestra de avances y conocimientos.</p>
+            <h4 class="text-white">{{Proyectos.nombre}}</h4>
+            <p>{{Proyectos.descripcion}}</p>
            </div>  
         </div>
   <!--------------------------------------------------------------------------------->
